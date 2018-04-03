@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable } from '@angular/core';
+import { HttpClientModule, HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS} from '@angular/common/http';
+import { RouterModule, Routes} from '@angular/router';
 
 
 import { AppComponent } from './app.component';
@@ -10,6 +12,19 @@ import { UserManagementModule } from './user-management/user-management.module';
 import { StaticModule } from './static/static.module';
 import { HeaderComponent } from './fragments/header/header.component';
 import { FooterComponent } from './fragments/footer/footer.component';
+import { routing } from './app.routing';
+
+@Injectable()
+export class XhrInterceptor implements HttpInterceptor {
+
+  intercept(req: HttpRequest<any>, next: HttpHandler) {
+    const xhr = req.clone({
+      headers: req.headers.set('X-Requested-With', 'XMLHttpRequest')
+    });
+    return next.handle(xhr);
+  }
+}
+
 
 
 @NgModule({
@@ -24,7 +39,8 @@ import { FooterComponent } from './fragments/footer/footer.component';
     DashboardModule,
     ReportModule,
     UserManagementModule,
-    StaticModule
+    StaticModule,
+    routing
   ],
   providers: [],
   bootstrap: [AppComponent]
