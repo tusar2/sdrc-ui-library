@@ -14,7 +14,9 @@ export class WebApiService {
   public paramVar: string;
   submissionId: number = null;
   constructor(private httpClient: HttpClient) { 
-    
+    this.getQuestions(null).subscribe(Response => {
+      this.questions = Response;
+    }) ;
   }
   
   // Todo: get from a remote source of question metadata
@@ -23,14 +25,16 @@ export class WebApiService {
   getQuestions(id) {  
     if(id == null){
       this.submissionId = null;
-      return this.httpClient.get(Constants.HOME_URL + 'getAllDataEntryQuestions');
+      return this.httpClient.get('./assets/data-entry-section.json');
     }
     else{
       this.submissionId = id;
       return this.httpClient.get(Constants.HOME_URL + 'getAllDataEntryQuestions?submissionId=' + id);
-    }
-      
+    }    
   }   
+
+  
+
   getTabWiseQuestions(questions,paramVar):FormModel<any>[] {   
     return questions[paramVar];
   }

@@ -13,6 +13,7 @@ import { StaticModule } from './static/static.module';
 import { HeaderComponent } from './fragments/header/header.component';
 import { FooterComponent } from './fragments/footer/footer.component';
 import { routing } from './app.routing';
+import { NO_ERRORS_SCHEMA } from '@angular/compiler/src/core';
 
 @Injectable()
 export class XhrInterceptor implements HttpInterceptor {
@@ -40,8 +41,10 @@ export class XhrInterceptor implements HttpInterceptor {
     ReportModule,
     UserManagementModule,
     StaticModule,
+    HttpClientModule,
     routing
   ],
+  schemas: [NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })
