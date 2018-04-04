@@ -6,14 +6,18 @@ import { routing } from './data-entry.routing';
 import { FormControlService } from './services/form-control.service';
 import { WebApiService } from './services/web-api.service';
 import { DataSharingService } from './services/data-sharing.service';
+import { FormsModule } from '@angular/forms';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 
 @NgModule({
   imports: [
     CommonModule,
-    routing
+    routing,
+    FormsModule
   ],
   declarations: [DataEntrySelectionComponent, DataEntryHeadComponent],
   exports: [DataEntrySelectionComponent, DataEntryHeadComponent],
-  providers: [FormControlService, WebApiService, DataSharingService]
+  providers: [FormControlService, WebApiService, DataSharingService],
+  schemas: [NO_ERRORS_SCHEMA]
 })
 export class DataEntryModule { }
