@@ -10,7 +10,7 @@ import { DataSharingService } from './services/data-sharing.service';
 @NgModule({
   imports: [
     CommonModule,
-    routing
+   // routing
   ],
   declarations: [DataEntrySelectionComponent, DataEntryHeadComponent],
   exports: [DataEntrySelectionComponent, DataEntryHeadComponent],
