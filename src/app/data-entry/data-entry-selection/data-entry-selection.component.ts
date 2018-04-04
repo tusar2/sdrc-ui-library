@@ -5,6 +5,7 @@ import { FormControlService } from '../services/form-control.service';
 import { WebApiService } from '../services/web-api.service';
 import { Router } from '@angular/router'
 import { DataSharingService } from '../services/data-sharing.service';
+import { log } from 'util';
 declare var $: any;
 
 @Component({
@@ -19,12 +20,14 @@ export class DataEntrySelectionComponent implements OnInit {
   formFieldsAll: any;
   payLoad = '';
   centralModalError:string; 
-  constructor(private formControlService: FormControlService, private formFieldService: WebApiService, private router: Router, private formDataSave: DataSharingService) { }
+  constructor(private formControlService: FormControlService, private webApi: WebApiService, private router: Router, private formDataSave: DataSharingService) { }
 
   ngOnInit() {
-    this.formFieldService.getDataEntryTimeperiodSelection().subscribe(data=>{
-      this.selectionFields = data;
-    }); 
+    console.log("called");
+    
+    this.webApi.getQuestions(null).subscribe(Response => {
+      this.selectionFields = Response['Awareness/ Outreach Activities'];
+    }) ;
   }
 
   submitForm(){
@@ -41,9 +44,9 @@ export class DataEntrySelectionComponent implements OnInit {
       this.formDataSave.periodreferenceName = this.selectionFields[1].value;
       this.formDataSave.yearId = this.selectionFields[0].key;
       this.formDataSave.yearName = this.selectionFields[0].value;
-      this.formFieldService.getCheckSubmission(this.selectionFields[0].key, this.selectionFields[1].key).subscribe(response=>{
+      this.webApi.getCheckSubmission(this.selectionFields[0].key, this.selectionFields[1].key).subscribe(response=>{
         if(response == null){
-          this.formFieldService.getQuestions(null).subscribe(data=>{
+          this.webApi.getQuestions(null).subscribe(data=>{
             this.formDataSave.form = data;
             this.formDataSave.setForm();
             this.router.navigateByUrl('/data-entry');
@@ -66,7 +69,7 @@ export class DataEntrySelectionComponent implements OnInit {
   }
   goToDrafts(){
     $('#alreadySaved').modal('hide');
-    this.formFieldService.getDrafts().subscribe(data=>{
+    this.webApi.getDrafts().subscribe(data=>{
       this.formDataSave.drafts = data;
       this.router.navigateByUrl('/drafts')
     })

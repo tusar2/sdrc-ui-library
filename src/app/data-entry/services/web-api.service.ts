@@ -14,9 +14,7 @@ export class WebApiService {
   public paramVar: string;
   submissionId: number = null;
   constructor(private httpClient: HttpClient) { 
-    this.getQuestions(null).subscribe(Response => {
-      this.questions = Response;
-    }) ;
+    
   }
   
   // Todo: get from a remote source of question metadata
