@@ -9,14 +9,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 
 export const routes: Routes = [
     { path: '', pathMatch: 'full', component: HomeComponent},
-    { path: '', pathMatch: 'full', component: AboutUsComponent},
-    { path: '', pathMatch: 'full', component: GalleryComponent},
-    { path: '', pathMatch: 'full', component: ResourceComponent},
-    { path: '', pathMatch: 'full', component: ContactUsComponent}
-    
-    
-  
-    // { path: 'login', loadChildren: './authentication/authentication.module#AuthenticationModule' }
+    { path: 'about-us', pathMatch: 'full', component: AboutUsComponent},
+    { path: 'gallery', pathMatch: 'full', component: GalleryComponent},
+    { path: 'resources', pathMatch: 'full', component: ResourceComponent},
+    { path: 'contact-us', pathMatch: 'full', component: ContactUsComponent}
   ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

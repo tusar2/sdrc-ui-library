@@ -15,6 +15,7 @@ import { FooterComponent } from './fragments/footer/footer.component';
 import { routing } from './app.routing';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Exception404Component } from './exception404/exception404.component';
 
 @Injectable()
 export class XhrInterceptor implements HttpInterceptor {
@@ -33,7 +34,8 @@ export class XhrInterceptor implements HttpInterceptor {
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    Exception404Component
   ],
   imports: [
     BrowserModule,
