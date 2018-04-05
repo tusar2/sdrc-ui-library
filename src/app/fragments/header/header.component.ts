@@ -9,13 +9,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   router:Router;
-  app: any;
-  userLevel: string;
-  userName: string;
-  userManagementLink: any = {data: { expectedRole: 'NATIONAL'}};
+
   constructor( router:Router) { 
     this.router = router;
-    // this.app = appService;
   }
 
   ngOnInit() {
