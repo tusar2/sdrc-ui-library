@@ -1,7 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 $primary-color: #1f4a7c;
-
 // customizing mdb bootstrap
 
 @mixin dropdownList(){
@@ -9,6 +8,13 @@ $primary-color: #1f4a7c;
     width: 100%;
     left: auto;
 }
+@mixin headerFooterZindex(){
+    z-index: 1000;
+}
+@function get-vw($target) { 
+    $vw-context: (1000*.01) * 1px;
+    @return  1vw;
+  }
 input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.md-textarea {
     border: 1px solid #CCCC;
     border-bottom: 1px solid #CCCC;
@@ -24,4 +30,10 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 .dropdown-menu.drp-list{
     @include dropdownList();
     
+}
+.logo-block, footer#foot{
+    @include headerFooterZindex()
+}
+body{
+    min-height: 1vh;
 }
