@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, Injectable } from '@angular/core';
 import { HttpClientModule, HttpEvent, HttpInterceptor, HttpHandler, HttpRequest, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { RouterModule, Routes} from '@angular/router';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AppComponent } from './app.component';
@@ -46,7 +47,8 @@ export class XhrInterceptor implements HttpInterceptor {
     StaticModule,
     HttpClientModule,
     routing,
-    FormsModule
+    FormsModule,
+    MDBBootstrapModule.forRoot()
   ],
   schemas: [NO_ERRORS_SCHEMA],
   providers: [],
