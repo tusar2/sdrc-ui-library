@@ -1,0 +1,122 @@
+
+{
+    "user-registration-fields": [       
+        {
+            "key": 1,
+            "label": "Salutation",
+            "controlType": "dropdown",
+            "type":"option",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Dr.",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "Mr.",
+                "order": 2
+              },
+              {
+                "key": 2,
+                "value": "Mrs.",
+                "order": 3
+              }              
+            ]
+        },
+        {
+            "key": 2,
+            "label": "Username",
+            "type":"text",
+            "controlType": "textbox"
+        },
+        {
+            "key": 3,
+            "label": "First name",
+            "type":"text",
+            "controlType": "textbox"
+        },
+        {
+            "key": 4,
+            "label": "Middle name",
+            "type":"text",
+            "controlType": "textbox"
+        },
+        {
+            "key": 5,
+            "label": "Last name",
+            "type":"text",
+            "controlType": "textbox"
+        },
+        {
+            "key": 6,
+            "label": "Date of Birth",
+            "type":"date",
+            "controlType": "textbox"
+        },
+        {
+            "key": 11,
+            "label": "Gender",
+            "type" : "option",
+            "controlType": "radio",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Male",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "Female",
+                "order": 2
+              },
+              {
+                "key": 2,
+                "value": "Other",
+                "order": 3
+              }              
+            ]
+        },
+        {
+            "key": 12,
+            "label": "Color",
+            "type" : "option",
+            "controlType": "checkbox",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Red",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "Green",
+                "order": 2
+              },
+              {
+                "key": 2,
+                "value": "Yellow",
+                "order": 3
+              }              
+            ]
+        },
+        {
+            "key": 7,
+            "label": "Email",
+            "type":"email",
+            "controlType": "textbox"
+        },
+        {
+            "key": 9,
+            "label": "Password",
+            "type":"password",
+            "controlType": "textbox"
+        },
+        {
+            "key": 10,
+            "label": "Mobile no",
+            "type" : "number",
+            "controlType": "textbox"
+        }        
+    ]
+}
