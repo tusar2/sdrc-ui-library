@@ -22,10 +22,14 @@ export class UserRegistrationComponent implements OnInit {
     this.webApi.getAllUserFields().subscribe(Response => {
       this.allUserFields = Response;
       this.userRegistrationFields = this.allUserFields['user-registration-fields'];
+      //console.log(this.userRegistrationFields);
     }) ;
   }
   submitForm(){
     console.log("submit");
+  }
+  selectDropDown(){
+    console.log("selected");
   }
 
 }

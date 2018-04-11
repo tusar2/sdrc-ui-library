@@ -55,7 +55,7 @@
             "controlType": "textbox"
         },
         {
-            "key": 11,
+            "key": 7,
             "label": "Gender",
             "type" : "option",
             "controlType": "radio",
@@ -78,7 +78,7 @@
             ]
         },
         {
-            "key": 12,
+            "key": 8,
             "label": "Color",
             "type" : "option",
             "controlType": "checkbox",
@@ -92,31 +92,48 @@
                 "key": 2,
                 "value": "Green",
                 "order": 2
-              },
-              {
-                "key": 2,
-                "value": "Yellow",
-                "order": 3
-              }              
+              }                      
             ]
         },
         {
-            "key": 7,
+            "key": 9,
             "label": "Email",
             "type":"email",
             "controlType": "textbox"
         },
         {
-            "key": 9,
+            "key": 10,
             "label": "Password",
             "type":"password",
             "controlType": "textbox"
         },
         {
-            "key": 10,
+            "key": 11,
             "label": "Mobile no",
             "type" : "number",
             "controlType": "textbox"
         }        
+    ],
+    "user-profile":[
+        {
+            "key": 1,
+            "label": "User role",
+            "placeholder": "Select user role",
+            "columnName": "role",
+            "controlType": "dropdown",
+            "type":"option",
+            "options":[                
+              {
+                "key": 1,
+                "value": "Admin",
+                "order": 1
+              },
+              {
+                "key": 2,
+                "value": "Users",
+                "order": 2
+              }             
+            ]
+        }
     ]
 }

@@ -3,7 +3,7 @@
   <div class="col-md-12">
   <div class="col-md-9 offset-md-1" style="margin-top: 50px;">
   <h2 class="page-heading">User registration</h2>
-  <form>
+  <form>     
     <div *ngFor="let field of userRegistrationFields; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}" class="row">
       <label [attr.for]="field.key" class="col-md-4 text-right">{{field.label}}:</label>
       <div [ngSwitch]="field.controlType" class="col-md-6 input-holder">
@@ -14,14 +14,14 @@
         <!-- Input dropdown-->
         <div class="btn-group" style="padding-left: 3px;
         width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
-          <input type="text" class="dropdown-input" [id]="field.key" readonly
+          <input type="text" class="dropdown-input" [id]="field.key"
           [placeholder]="field.placeholder" [(ngModel)]="field.value" name="{{field.key}}" >
           <button type="button" dropdownToggle style="padding: 0"
           class="btn btn-default dropdown-toggle dropdown-toggle-split px-3 waves-light select-dropdown" 
            mdbRippleRadius></button>
           <div class="dropdown-menu">
               <a class="dropdown-item" style="font-size: 13px;"
-               *ngFor="let opt of field.options" [value]="opt.key">{{opt.value}}</a>
+               *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropDown(opt)">{{opt.value}}</a>
           </div>
         </div>
 
@@ -47,7 +47,7 @@
     </div>
 
     <div class="form-group row">
-      <div class="col-md-6 offset-md-5">
+      <div class="col-md-6 offset-md-6">
         <button class="btn btn-default" type="submit" (click)="submitForm()">Submit</button>
       </div>
     </div>

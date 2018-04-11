@@ -37,3 +37,26 @@ input[type=date], input[type=datetime-local], input[type=email], input[type=numb
 body{
     min-height: 1vh;
 }
+.input-holder{
+    display: inline-block;
+}
+.no-spinners [type='number'] {
+    -moz-appearance:textfield;
+}  
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+    margin: 0;
+}  
+.page-heading{
+    font-size: 26px;
+    text-align: center;
+    border-bottom: 1px solid #31859c;
+    color: #31859c;
+    margin-bottom: 30px;
+}
+.btn-default, .btn-default:hover,.btn-default:focus, .btn-default:active, 
+.btn-default.dropdown-toggle, .btn-default.dropdown-toggle:hover, 
+.btn-default.dropdown-toggle:focus, .btn-default.dropdown-toggle:active {
+    background-color: $primary-color !important; 
+}
