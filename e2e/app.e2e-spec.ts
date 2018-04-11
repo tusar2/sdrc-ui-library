@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('sdrc-ui-library App', () => {
+describe('client App', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +9,6 @@ describe('sdrc-ui-library App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to sdrc!');
+    expect(page.getParagraphText()).toEqual('Greeting');
   });
 });

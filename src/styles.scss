@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+
+$primary-color: #1f4a7c;
+// customizing mdb bootstrap
+
+@mixin dropdownList(){
+    right: 0;
+    width: 100%;
+    left: auto;
+}
+@mixin headerFooterZindex(){
+    z-index: 1000;
+}
+@function get-vw($target) { 
+    $vw-context: (1000*.01) * 1px;
+    @return  1vw;
+  }
+input[type=date], input[type=datetime-local], input[type=email], input[type=number], input[type=password], input[type=search-md], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], textarea.md-textarea {
+    border: 1px solid #CCCC;
+    border-bottom: 1px solid #CCCC;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+.indicator-container{
+    margin-bottom: 20px;
+}
+.dropdown-menu.drp-list{
+    @include dropdownList();
+    
+}
+.logo-block, footer#foot{
+    @include headerFooterZindex()
+}
+body{
+    min-height: 1vh;
+}

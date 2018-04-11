@@ -2,7 +2,11 @@
   <div class="logo-secion" id="logo-section">
      <a href="#" style="float: left;"><img src="./assets/images/logo.png" alt="BBBP" width="85px"></a>
      <div class="logo-text"><h2>UI Component Library</h2><p>project by ui team</p></div>
+<<<<<<< HEAD
      <a href="#" style="float:right;"><img src="./assets/images/logo-right.png" alt="MWCD" width="85px" class="logo-img"></a>
+=======
+     <!-- <a href="#" style="float:right;"><img src="./assets/images/logo-right.png" alt="MWCD" width="85px" class="logo-img"></a> -->
+>>>>>>> b7963126300e8dbe4a5a0f757e002ae402d8023f
   </div>
 </div>
 <header id="header">
@@ -17,15 +21,20 @@
       <li class="nav-item" [ngClass]="{'active': router.url=='/about-us'}">
           <a class="nav-link" mdbRippleRadius routerLink="about-us">About Us</a>
       </li>
-     
+      <li class="nav-item" [ngClass]="{'active': router.url=='/data-entry'}">
+        <a class="nav-link" mdbRippleRadius routerLink="data-entry">Data Entry</a>
+      </li>
       <li class="nav-item" [ngClass]="{'active': router.url=='/gallery'}">
         <a class="nav-link" mdbRippleRadius routerLink="gallery">Gallery</a>
         </li>
-    <li class="nav-item" [ngClass]="{'active': router.url=='/resources'}">
+       <li class="nav-item" [ngClass]="{'active': router.url=='/resources'}">
             <a class="nav-link" mdbRippleRadius routerLink="resources">Resources</a>
          </li>
          <li class="nav-item" [ngClass]="{'active': router.url=='/contact-us'}">
             <a class="nav-link" mdbRippleRadius routerLink="contact-us">Contact Us</a>
+          </li>
+          <li class="nav-item" [ngClass]="{'active': router.url=='/login'}">
+            <a class="nav-link" mdbRippleRadius routerLink="login">Login</a>
           </li>
       
   </ul>

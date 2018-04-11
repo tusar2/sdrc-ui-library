@@ -19,7 +19,9 @@ export class WebApiService {
   
   // Todo: get from a remote source of question metadata
   // Todo: make asynchronous
-
+  getTimeperiodSelections(){
+    return this.httpClient.get('./assets/form-questions.json');
+  }
   getQuestions(id) {  
     if(id == null){
       this.submissionId = null;

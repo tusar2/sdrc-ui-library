@@ -8,6 +8,7 @@ import { WebApiService } from './services/web-api.service';
 import { DataSharingService } from './services/data-sharing.service';
 import { FormsModule } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 @NgModule({
   imports: [
