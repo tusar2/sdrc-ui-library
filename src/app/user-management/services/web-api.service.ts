@@ -12,4 +12,7 @@ export class WebApiService {
     this.allFields = this.httpClient.get('./assets/user-details.json');
     return  this.allFields;
   }
+  getAreaDetails(){
+    return this.httpClient.get('./assets/tableData.json');
+  }
 }
