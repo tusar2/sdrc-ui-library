@@ -4,6 +4,7 @@
         {
             "key": 1,
             "label": "Salutation",
+            "columnName": "salutation",
             "controlType": "dropdown",
             "type":"option",
             "options":[                
@@ -27,36 +28,42 @@
         {
             "key": 2,
             "label": "Username",
+            "columnName": "name",
             "type":"text",
             "controlType": "textbox"
         },
         {
             "key": 3,
             "label": "First name",
+            "columnName": "fname",
             "type":"text",
             "controlType": "textbox"
         },
         {
             "key": 4,
             "label": "Middle name",
+            "columnName": "mname",
             "type":"text",
             "controlType": "textbox"
         },
         {
             "key": 5,
             "label": "Last name",
+            "columnName": "lname",
             "type":"text",
             "controlType": "textbox"
         },
         {
             "key": 6,
             "label": "Date of Birth",
+            "columnName": "dob",
             "type":"date",
             "controlType": "textbox"
         },
         {
             "key": 7,
             "label": "Gender",
+            "columnName": "gender",
             "type" : "option",
             "controlType": "radio",
             "options":[                
@@ -80,6 +87,7 @@
         {
             "key": 8,
             "label": "Color",
+            "columnName": "color",
             "type" : "option",
             "controlType": "checkbox",
             "options":[                
@@ -98,18 +106,21 @@
         {
             "key": 9,
             "label": "Email",
+            "columnName": "mail",
             "type":"email",
             "controlType": "textbox"
         },
         {
             "key": 10,
             "label": "Password",
+            "columnName": "pwd",
             "type":"password",
             "controlType": "textbox"
         },
         {
             "key": 11,
             "label": "Mobile no",
+            "columnName": "mob",
             "type" : "number",
             "controlType": "textbox"
         }        

@@ -8,27 +8,27 @@
       <label [attr.for]="field.key" class="col-md-4 text-right">{{field.label}}:</label>
       <div [ngSwitch]="field.controlType" class="col-md-6 input-holder">
         <!-- input text box -->
-        <input *ngSwitchCase="'textbox'" name="{{field.key}}"
+        <input *ngSwitchCase="'textbox'" name="{{field.columnName}}"
                 [id]="field.key" [type]="field.type" [(ngModel)]="field.value" class="form-control" [ngClass]="[field.type == 'number'? 'no-spinners': '']">
          
         <!-- Input dropdown-->
         <div class="btn-group" style="padding-left: 3px;
         width: 100%;margin-bottom: 1rem" dropdown *ngSwitchCase="'dropdown'">
           <input type="text" class="dropdown-input" [id]="field.key"
-          [placeholder]="field.placeholder" [(ngModel)]="field.value" name="{{field.key}}" >
+          [placeholder]="''" [(ngModel)]="field.value" name="{{field.columnName}}" >
           <button type="button" dropdownToggle style="padding: 0"
-          class="btn btn-default dropdown-toggle dropdown-toggle-split px-3 waves-light select-dropdown" 
+          class="btn btn-default dropdown-toggle px-3 waves-light select-dropdown" 
            mdbRippleRadius></button>
-          <div class="dropdown-menu">
+          <div class="dropdown-menu drp-list">
               <a class="dropdown-item" style="font-size: 13px;"
-               *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropDown(opt)">{{opt.value}}</a>
+               *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropDown(opt, userRegistrationFields, i)">{{opt.value}}</a>
           </div>
         </div>
 
         <!-- Input type radio -->
         <div *ngSwitchCase="'radio'">
           <div class="radio-btn-group" *ngFor="let opt of field.options">
-            <input name="{{field.key}}" type="radio" id="{{opt.key}}">
+            <input name="{{field.columnName}}" type="radio" id="{{opt.key}}">
             <label for="{{opt.key}}">{{opt.value}}</label>
           </div>
         </div>
@@ -36,7 +36,7 @@
           <!-- Input type checkbox -->
           <div *ngSwitchCase="'checkbox'">
             <div class="check-btn-group" *ngFor="let opt of field.options">
-              <input name="{{field.key}}" type="checkbox" id="{{opt.key}}">
+              <input name="{{field.columnName}}" type="checkbox" id="{{opt.key}}">
               <label for="{{opt.key}}">{{opt.value}}</label>
             </div>
           </div>

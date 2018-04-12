@@ -4,7 +4,6 @@ import { FormModel } from '../models/user-forms.model';
 import { UserFormControlService } from '../services/user-form-control.service';
 import { WebApiService } from '../services/web-api.service';
 import { UserDataSharingService } from '../services/user-data-sharing.service';
-import { Input } from '@angular/core/src/metadata/directives'; 
 declare var $: any;
 
 @Component({
@@ -16,11 +15,13 @@ export class UserRegistrationComponent implements OnInit {
 
   allUserFields: any;
   userRegistrationFields: any; 
-  constructor(private webApi: WebApiService,) { }
+  userForms: UserModel[];
+
+  constructor(private formControlService: UserFormControlService, private webApi: WebApiService, private formDataSave: UserDataSharingService) { }
 
   ngOnInit() {
     this.webApi.getAllUserFields().subscribe(Response => {
-      this.allUserFields = Response;
+      this.allUserFields = <UserModel[]>Response;
       this.userRegistrationFields = this.allUserFields['user-registration-fields'];
       //console.log(this.userRegistrationFields);
     }) ;
@@ -28,8 +29,9 @@ export class UserRegistrationComponent implements OnInit {
   submitForm(){
     console.log("submit");
   }
-  selectDropDown(){
-    console.log("selected");
+  selectDropDown(selectedOption, model, index){    
+    this.userForms[index].value = selectedOption.value;
+    this.userForms[index].key = selectedOption.key;
   }
 
 }
