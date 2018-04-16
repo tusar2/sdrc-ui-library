@@ -7,10 +7,7 @@
 .panel-img{
     float:right;
 }
-.content-container{
-    //height: 400px;
-    //width: 400px;
-}
+
 .about-text h6 {
     font-size: 18px;
     font-family: sans-serif;
@@ -30,4 +27,20 @@
 }
 .container {
     margin-top: 30px;
+}
+@media (max-width: 520px){
+    .img-conatiner {  
+        margin-bottom: 25px;
+    }
+}
+@media (max-width: 608px){
+    .img-conatiner {
+         margin-bottom: 25px;
+
+    }
+}
+@media (max-width: 768px){
+    .img-conatiner {
+        margin-left: 28px;
+    }
 }

@@ -1,3 +1,40 @@
 .waves-light, .waves-light:hover, .waves-light:focus{
     background-color: #1f4a7c !important;
 }
+.text-center button{
+    background-color: #1f4a7c;
+    text-transform: none;
+    
+    
+}
+.btn-group{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.page-heading{
+    font-size: 26px;
+    margin-bottom: 35px;
+    text-align: center;
+    border-bottom: 1px solid #1f4a7c;
+    color: #1f4a7c;
+    padding-bottom: 8px;
+    font-family: sans-serif;
+}
+label.col-md-3 {
+    font-size: 1rem;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+@media (max-width : 608px){
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    width: 100%;
+}
+}
+@media(max-width:520px){
+    .row.question-row {
+        margin-left: 9px;
+    }
+}
