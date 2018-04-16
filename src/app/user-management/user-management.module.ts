@@ -8,6 +8,7 @@ import { UserFormControlService } from './services/user-form-control.service';
 import { UserDataSharingService } from './services/user-data-sharing.service';
 import { FormsModule } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { UserProfileEditComponent } from './user-profile-edit/user-profile-edit.component';
 
 @NgModule({
   imports: [
@@ -15,8 +16,8 @@ import { NO_ERRORS_SCHEMA } from '@angular/core';
     routing,
     FormsModule
   ],
-  declarations: [UserLoginComponent, UserRegistrationComponent],
-  exports: [UserLoginComponent, UserRegistrationComponent],
+  declarations: [UserLoginComponent, UserRegistrationComponent, UserProfileEditComponent],
+  exports: [UserLoginComponent, UserRegistrationComponent, UserProfileEditComponent],
   providers: [WebApiService, UserFormControlService, UserDataSharingService],
   schemas: [NO_ERRORS_SCHEMA]
 })

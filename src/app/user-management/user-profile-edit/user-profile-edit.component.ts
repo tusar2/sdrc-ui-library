@@ -6,15 +6,18 @@ import { WebApiService } from '../services/web-api.service';
 import { UserDataSharingService } from '../services/user-data-sharing.service';
 declare var $: any;
 
+
 @Component({
-  selector: 'sdrc-user-registration',
-  templateUrl: './user-registration.component.html',
-  styleUrls: ['./user-registration.component.scss']
+  selector: 'sdrc-user-profile-edit',
+  templateUrl: './user-profile-edit.component.html',
+  styleUrls: ['./user-profile-edit.component.scss']
 })
-export class UserRegistrationComponent implements OnInit {
+export class UserProfileEditComponent implements OnInit {
 
   allUserFields: any;
-  userRegistrationFields: any; 
+  userFields: any; 
+  areaDetails: any;
+  columns: any;  
   userForms: UserModel[];
 
   constructor(private formControlService: UserFormControlService, private webApi: WebApiService, private formDataSave: UserDataSharingService) { }
@@ -22,14 +25,19 @@ export class UserRegistrationComponent implements OnInit {
   ngOnInit() {
     this.webApi.getAllUserFields().subscribe(Response => {
       this.allUserFields = <UserModel[]>Response;
-      this.userRegistrationFields = this.allUserFields['user-registration-fields'];
-      //console.log(this.userRegistrationFields);
+      this.userFields = this.allUserFields['user-profile'];
     }) ;
+    this.webApi.getAreaDetails().subscribe(data=>{
+      this.areaDetails = data;      
+      for(let i=0; i<this.areaDetails.length; i++)
+      this.columns = Object.keys(this.areaDetails[i])
+    })      
   }
   submitForm(){
-    console.log("submit");
+    console.log("submitted");
   }
-  selectDropDown(selectedOption, model, index){    
+  selectDropDown(selectedOption, model, index){
+    console.log("selected");
     this.userForms[index].value = selectedOption.value;
     this.userForms[index].key = selectedOption.key;
   }
