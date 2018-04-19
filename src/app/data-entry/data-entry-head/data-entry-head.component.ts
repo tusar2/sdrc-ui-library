@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'sdrc-data-entry-head',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataEntryHeadComponent implements OnInit {
 
-  constructor() { }
+  router: Router;
+  constructor(router: Router) { 
+    this.router = router;
+  }
 
   ngOnInit() {
   }
