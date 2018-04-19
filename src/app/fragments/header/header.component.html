@@ -17,6 +17,9 @@
       <li class="nav-item" [ngClass]="{'active': router.url=='/about-us'}">
           <a class="nav-link" mdbRippleRadius routerLink="about-us">About Us</a>
       </li>
+      <li class="nav-item" [ngClass]="{'active': router.url=='/dashboard'}">
+        <a class="nav-link" mdbRippleRadius routerLink="dashboard">Dashboard</a>
+    </li>
       <li class="nav-item" [ngClass]="{'active': router.url=='/data-entry'}">
         <a class="nav-link" mdbRippleRadius routerLink="data-entry">Data Entry</a>
       </li>
@@ -29,9 +32,7 @@
          <li class="nav-item" [ngClass]="{'active': router.url=='/contact-us'}">
             <a class="nav-link" mdbRippleRadius routerLink="contact-us">Contact Us</a>
           </li>
-          <li class="nav-item" [ngClass]="{'active': router.url=='/data-entry'}">
-            <a class="nav-link" mdbRippleRadius routerLink="data-entry">Data Entry</a>
-          </li>
+         
       
   </ul>
   <!-- Links -->
