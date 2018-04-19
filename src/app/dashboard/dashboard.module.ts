@@ -10,13 +10,15 @@ import { GoogleMapComponent } from './charts/google-map/google-map.component';
 import { DashboardService } from './services/dashboard.service';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 import { SpiderChartComponent } from './charts/spider-chart/spider-chart.component';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
   imports: [
     CommonModule,
     routing,
-    FormsModule
+    FormsModule,
+    AgmCoreModule
   ],
   declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent],
   exports: [ LineChartComponent],
