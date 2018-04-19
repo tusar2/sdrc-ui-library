@@ -2,6 +2,7 @@ import { Component, OnInit,Input,Output, ElementRef, ViewChild, ViewEncapsulatio
 import * as d3 from 'd3';
 import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
 import { forEach } from '@angular/router/src/utils/collection';
+import { BarchartModel } from '../../models/barchart.model';
 declare var jquery:any;
 declare var $ :any;
 
@@ -14,7 +15,7 @@ declare var $ :any;
 export class BarChartComponent implements OnInit {
 
   @ViewChild('chart') private chartContainer: ElementRef;
-  @Input() private data: Array<any>;
+  @Input() private data: BarchartModel;
   constructor() { }
 
   ngOnInit() {
