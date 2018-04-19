@@ -5,6 +5,7 @@ import { RouterModule, Routes} from '@angular/router';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { DataEntryModule } from './data-entry/data-entry.module';
@@ -31,7 +32,6 @@ export class XhrInterceptor implements HttpInterceptor {
 }
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,6 +49,9 @@ export class XhrInterceptor implements HttpInterceptor {
     HttpClientModule,
     routing,
     FormsModule,
+    AgmCoreModule.forRoot({
+      apiKey:'AIzaSyDMIi1qnl_K9VYeOx_c1mHttcTirQV2Jvc'
+    }),
     LoadingBarRouterModule,
     LoadingBarHttpClientModule,
     MDBBootstrapModule.forRoot()
