@@ -19,12 +19,10 @@ export class DataEntrySelectionComponent implements OnInit {
   constructor(private formControlService: FormControlService, private webApi: WebApiService, private router: Router, private formDataSave: DataSharingService) { }
 
   ngOnInit() {
-    console.log("called");
-    
+    console.log("called");    
     this.webApi.getTimeperiodSelections().subscribe(Response => {
       console.log(Response)
-      this.formIndicators = <FormIndicatorModel[]> Response;
-      
+      this.formIndicators = <FormIndicatorModel[]> Response;      
     }) ;
   }
 
@@ -73,6 +71,9 @@ export class DataEntrySelectionComponent implements OnInit {
   //   })
     
   // }
+  createDataEntry(){
+    this.router.navigateByUrl('/data-entry-form');
+  }
   selectDropdown(selectedOption, model, index){
     // this.formIndicators[index].errorFound = false;
     // this.formIndicators[index].errorMessage= "";

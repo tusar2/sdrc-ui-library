@@ -22,6 +22,9 @@ export class WebApiService {
   getTimeperiodSelections(){
     return this.httpClient.get('./assets/form-questions.json');
   }
+  getDataEntryDetails(){
+    return this.httpClient.get('./assets/dummyQ.json');
+  }
   getQuestions(id) {  
     if(id == null){
       this.submissionId = null;

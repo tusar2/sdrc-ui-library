@@ -9,6 +9,7 @@ import { DataSharingService } from './services/data-sharing.service';
 import { FormsModule } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { DataEntryContentComponent } from './data-entry-content/data-entry-content.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     routing,
     FormsModule
   ],
-  declarations: [DataEntrySelectionComponent, DataEntryHeadComponent],
+  declarations: [DataEntrySelectionComponent, DataEntryHeadComponent, DataEntryContentComponent],
   exports: [DataEntrySelectionComponent, DataEntryHeadComponent],
   providers: [FormControlService, WebApiService, DataSharingService],
   schemas: [NO_ERRORS_SCHEMA]
