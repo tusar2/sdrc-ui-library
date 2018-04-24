@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../services/dashboard.service';
-import { BarchartModel } from '../models/barchart.model';
 import { GoogleMapModel } from '../models/google-map.model';
+import { LineChartModel } from '../models/line-chart.model';
+import { SpiderChartModel } from '../models/spider-chart.model';
+import { BarchartModel } from '../models/barchart.model';
+import { DonutChartModel } from '../models/donut-chart.model';
 
 @Component({
   selector: 'sdrc-dashboard',
@@ -10,29 +13,36 @@ import { GoogleMapModel } from '../models/google-map.model';
   providers: [DashboardService]
 })
 export class DashboardComponent implements OnInit {
-  spiderData: any;
-  mapData: any;
-  lineChartData:GoogleMapModel[];
-  barChartData: BarchartModel;
+  spiderData: SpiderChartModel;
+  mapData: GoogleMapModel[];
+  lineChartData:LineChartModel[];
+  barChartData: BarchartModel[];
+  donutChartData: DonutChartModel
 
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
     this.dashboardService.getSpiderChart().subscribe(data=>{
-      this.spiderData =  data;
+      this.spiderData =  <SpiderChartModel>data;
     })
 
     this.dashboardService.getLineChartData().subscribe(data=>{
-      this.lineChartData = <GoogleMapModel[]>data;
+      this.lineChartData = <LineChartModel[]>data;
     })
 
     this.dashboardService.getBarChartData().subscribe(data=>{
-      this.barChartData =  <BarchartModel>data;
+      this.barChartData =  <BarchartModel[]>data;
     })
 
     this.dashboardService.getMapData().subscribe(data=>{
-      this.mapData =  data;
+      this.mapData =  <GoogleMapModel[]>data;
     })
+
+    this.dashboardService.getDonutChartData().subscribe(data=>{
+      this.donutChartData =  <DonutChartModel>data;
+    })
+
+  
   }
 
 }
