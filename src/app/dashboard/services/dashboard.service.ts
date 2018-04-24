@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { GoogleMapModel } from '../models/google-map.model';
 
 @Injectable()
 export class DashboardService {
@@ -16,6 +17,6 @@ export class DashboardService {
     return this.httpClient.get('assets/spiderData.json')
   }
   getLineChartData(){
-    return this.httpClient.get('assets/lineChartData.json');
+    return this.httpClient.get<GoogleMapModel[]>('assets/lineChartData.json');
   }
 }

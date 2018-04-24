@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
     })
 
     this.dashboardService.getLineChartData().subscribe(data=>{
-      this.lineChartData = <GoogleMapModel[]>data;
+      this.lineChartData = data;
     })
 
     this.dashboardService.getBarChartData().subscribe(data=>{
