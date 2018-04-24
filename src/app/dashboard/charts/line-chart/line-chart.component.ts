@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, OnChanges, ViewChild, ElementRef, Input } from '@angular/core';
 import * as d3 from 'd3';
 import { forEach } from '@angular/router/src/utils/collection';
-import { GoogleMapModel } from '../../models/google-map.model';
+import { LineChartModel } from '../../models/line-chart.model';
 declare var jquery:any;
 declare var $ :any;
 
@@ -14,7 +14,7 @@ declare var $ :any;
 export class LineChartComponent implements OnInit, OnChanges {
 
   @ViewChild('linechart') private chartContainer: ElementRef;
-  @Input() private data: GoogleMapModel;
+  @Input() private data: LineChartModel[];
 
   constructor() { }
 
