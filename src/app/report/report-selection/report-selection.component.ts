@@ -20,4 +20,11 @@ export class ReportSelectionComponent implements OnInit {
     })
   }
 
+  selectDropdown(selectedOption, model, index){
+    // this.formIndicators[index].errorFound = false;
+    // this.formIndicators[index].errorMessage= "";
+    this.selectionInputs[index].value = selectedOption.value;
+    this.selectionInputs[index].key = selectedOption.key;
+  }
+
 }

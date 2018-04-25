@@ -1,8 +1,9 @@
 <section class="container selection-section">
      <form  style="margin-top: 50px;">
-       <div *ngFor="let field of selectionInputs; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}" class="row indicator-container">
-        <label [attr.for]="field.columnName" class="col-md-3">{{field.label}}</label> 
-        <div [ngSwitch]="field.controlType" class="col-md-9 input-holder">
+       <div class="row">
+       <div *ngFor="let field of selectionInputs; let i = index;" [ngClass]="{'form-group':field.controlType == 'textbox'}" class="col-md-3 indicator-container">
+        <label [attr.for]="field.columnName" class="col-md-12">{{field.label}}</label> 
+        <div [ngSwitch]="field.controlType" class="col-md-12 input-holder">
            <!-- Input dropdown-->
            <div class="btn-group" *ngSwitchCase="'dropdown'">
              <input type="text" [id]="field.columnName" style="padding: 0 10px;" readonly
@@ -12,11 +13,11 @@
               mdbRippleRadius></button>
              <div class="dropdown-menu drp-list">
                  <a class="dropdown-item" style="font-size: 13px;"
-                  *ngFor="let opt of field.options" [value]="opt.key" (click)="selectDropdown(opt, formIndicators, i)">{{opt.value}}</a>
+                  *ngFor="let opt of field.options" (click)="selectDropdown(opt, selectionInputs, i)">{{opt.value}}</a>
              </div>
            </div>    
          </div> 
-         
+        </div>
        </div>
        
        <div class="form-group row">
