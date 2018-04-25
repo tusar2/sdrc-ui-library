@@ -9,4 +9,4 @@ export const routes: Routes = [
     { path: 'dashboard', pathMatch: 'full', component: DashboardComponent},
   ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
+export const routing: ModuleWithProviders = RouterModule.forChild(routes);
