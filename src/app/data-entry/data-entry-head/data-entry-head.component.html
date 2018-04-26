@@ -1,16 +1,7 @@
 <div>
   <ul class="data-heads">
-    <li class="data-head-list" [ngClass]="{'active': router.url=='/data-entry'}">
-        <span class="list-span"><a routerLink="/data-entry-form">Inter-sectoral convergence/initiatives</a></span>      
-    </li>
-    <li class="data-head-list" [ngClass]="{'active': router.url=='/data-entry-survival'}">
-        <span class="list-span"> <a routerLink="/data-entry-form">Inter-sectoral initiatives for equal value of girl child</a></span>
-    </li>
-    <li class="data-head-list" [ngClass]="{'active': router.url=='/data-entry-training'}">
-        <span class="list-span"><a routerLink="/data-entry-form"> Training and capacity-building </a></span>
-    </li>
-    <li class="data-head-list" [ngClass]="{'active': router.url=='/data-entry-awareness'}">
-        <span class="list-span"><a routerLink="/data-entry-awareness"> Awareness/outreach activities </a></span>
+    <li class="data-head-list" *ngFor="let section of allDataService.allformData | objIterate">
+        <span class="list-span"><a  (click)="selectSetion(section);">{{section}}</a></span>      
     </li>
   </ul>
 </div>

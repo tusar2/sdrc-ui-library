@@ -4,6 +4,7 @@ import { FormModel } from '../models/data-entry-form.model';
 import { FormControlService } from '../services/form-control.service';
 import { WebApiService } from '../services/web-api.service';
 import { Router } from '@angular/router'
+import { ObjIteratePipe } from '../pipes/obj-iterate.pipe'
 import { DataSharingService } from '../services/data-sharing.service';
 import { log } from 'util';
 declare var $: any;
@@ -14,20 +15,17 @@ declare var $: any;
   styleUrls: ['./data-entry-content.component.scss']
 })
 export class DataEntryContentComponent implements OnInit {
-  allformData: any;
-  formsData: any;
-  constructor(private formControlService: FormControlService, private webApi: WebApiService, private router: Router, private formDataSave: DataSharingService) { }
+  selectedVal: string; 
+  allDataService: DataSharingService; 
+  constructor(private formControlService: FormControlService, private webApi: WebApiService, private router: Router, private dataSharingService: DataSharingService) {
+    this.allDataService = dataSharingService;
+   }
 
-  ngOnInit() {
-    this.webApi.getDataEntryDetails().subscribe(Response => {
-      console.log(Response);
-      this.allformData = Response;
-      console.log((this.allformData));
-      console.log(Object.keys(this.allformData));
-      for(let i=0; i< this.allformData.length; i++){
-        this.formsData.push(this.allformData[i]);        
-        console.log(this.formsData);
-      }
-    });
+  ngOnInit() {}
+
+  selectDropdown(selectedOption, index){  
+  //  this.allDataService.allformData[index].value = selectedOption.value;
+  //  this.allDataService.allformData[index].key = selectedOption.key;
+  //  console.log(this.allDataService.allformData[index].value);
   }
 }

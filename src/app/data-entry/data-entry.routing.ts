@@ -11,7 +11,8 @@ export const routes: Routes = [
     {path: 'data-entry/head', component: DataEntryHeadComponent, pathMatch: 'full'},
     {path: 'data-entry/selection', component: DataEntrySelectionComponent, pathMatch: 'full'},
     {path: 'data-entry', redirectTo: 'data-entry/selection'},
-    {path: 'data-entry-form', component: DataEntryContentComponent, pathMatch: 'full'}
+    {path: 'data-entry-form', component: DataEntryContentComponent, pathMatch: 'full'},
+    {path: 'data-entry-awareness', component: DataEntryContentComponent, pathMatch: 'full'}
 ]
 
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);

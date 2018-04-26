@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { DataEntryContentComponent } from './data-entry-content/data-entry-content.component';
+import { ObjIteratePipe } from './pipes/obj-iterate.pipe';
 
 @NgModule({
   imports: [
@@ -17,7 +18,7 @@ import { DataEntryContentComponent } from './data-entry-content/data-entry-conte
     routing,
     FormsModule
   ],
-  declarations: [DataEntrySelectionComponent, DataEntryHeadComponent, DataEntryContentComponent],
+  declarations: [DataEntrySelectionComponent, DataEntryHeadComponent, DataEntryContentComponent, ObjIteratePipe],
   exports: [DataEntrySelectionComponent, DataEntryHeadComponent],
   providers: [FormControlService, WebApiService, DataSharingService],
   schemas: [NO_ERRORS_SCHEMA]

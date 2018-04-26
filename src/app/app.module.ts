@@ -37,7 +37,7 @@ export class XhrInterceptor implements HttpInterceptor {
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    Exception404Component
+    Exception404Component,
   ],
   imports: [
     BrowserModule,

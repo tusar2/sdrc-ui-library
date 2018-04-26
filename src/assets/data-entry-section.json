@@ -1,8 +1,8 @@
 
 {
-    "INTER-SECTORAL CONVERGENCE /INITIATIVES": [
+    "Inter-sectorial convergence/initiatives": 
       {
-        "BBBP INSTITUTIONAL MECHANISMS": [
+        "BBBP Institutional Mechanisms": [
           {
             "key": 1,
             "label": "District Task Force Constituted : Yes/No",
@@ -137,7 +137,7 @@
           },
           {
             "key": 8,
-            "label": "Number of stakeholders reached out:",
+            "label": "Number of stakeholders reached out",
             "aggRole": "",
             "type": "number",
             "columnName": "b02",
@@ -154,7 +154,7 @@
           },
           {
             "key": 9,
-            "label": "Please mention the departments that participated in these meetings:",
+            "label": "Please mention the departments that participated in these meetings",
             "aggRole": "",
             "type": "option",
             "columnName": "b03",
@@ -191,9 +191,8 @@
             "controlType": "dropdown"
           }
         ]
-      }
-    ],
-    "INTER-SECTORAL INITIATIVES  FOR EQUAL VALUE OF GIRL CHILD": [
+      } ,
+    "Inter-sectorial initiatives for equal value of girl child": 
       {
         "Survival of Girl Child - Implement PC&PNDT Act": [
           {
@@ -1355,8 +1354,8 @@
           }
         ]
       }
-    ],
-    "Awareness/ Outreach Activities": [
+    ,
+    "Awareness/outreach activities": 
       {
         "Reward and Recognize stakeholders associated with BBBP": [
           {
@@ -1696,8 +1695,8 @@
           }
         ]
       }
-    ],
-    "Training and Capacity-building": [
+    ,
+    "Training and capacity-building": 
       {
         "Train a pool of master-trainers at district level": [
           {
@@ -1789,5 +1788,5 @@
           }
         ]
       }
-    ]
+    
   }

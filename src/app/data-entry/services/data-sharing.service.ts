@@ -17,19 +17,15 @@ export class DataSharingService {
   yearId: number;
   yearName: string;
   drafts: any;
+  selectedSection: string;
+  allformData: any;
   selectedFilesToUpload: any[] = [];
   totalNumberFilesUploaded = 0;
   numberOfNewFileAttachements: number = 0;
-  constructor(private httpClient: HttpClient) { 
-    // if(!this.form){
-    //   this.httpClient.get(Constants.HOME_URL + 'getAllDataEntryQuestions').subscribe(data=>{
-    //     if(!this.form){
-    //       this.form = data;
-    //       this.setForm();
-    //     }
-    //   });
-    // }
+ 
+  constructor(private httpClient: HttpClient, private webApi: WebApiService) {     
   }
+  
   setForm(){
     console.log(this.form)
     let sections = Object.keys(this.form);
