@@ -61,6 +61,14 @@ body{
 .btn-default.dropdown-toggle:focus, .btn-default.dropdown-toggle:active, .btn-submit {
     background-color: $primary-color !important; 
 }
+
+header#header.header-sec-fixed {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
 input[type=file] {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -101,4 +109,3 @@ input[type=file] {
    right: 0;
  }
  
-

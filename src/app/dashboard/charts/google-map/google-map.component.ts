@@ -3,6 +3,9 @@ import { AgmSnazzyInfoWindow } from '@agm/snazzy-info-window';
 import { AgmMap } from '@agm/core';
 import { DashboardService } from '../../services/dashboard.service';
 
+import { GoogleMapModel } from '../../models/google-map.model';
+
+
 @Component({
   selector: 'sdrc-google-map',
   templateUrl: './google-map.component.html',
@@ -15,7 +18,11 @@ export class GoogleMapComponent implements OnInit {
   zoom: number = 6;
   lat: number = 22.983170000000005;
   lng: number = 83.0379;
+
+  mapMarkers: GoogleMapModel[];
+
   mapMarkers: any;
+
 
   ngOnInit() {
     this.dashboardService.getMapData().subscribe(data=>{

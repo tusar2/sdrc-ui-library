@@ -11,9 +11,25 @@ import { DashboardService } from './services/dashboard.service';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 import { SpiderChartComponent } from './charts/spider-chart/spider-chart.component';
 
+import { AgmCoreModule } from '@agm/core';
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { DoughnutChartComponent } from './charts/doughnut-chart/doughnut-chart.component';
 
 @NgModule({
   imports: [
+    BrowserModule,
+    CommonModule,
+    routing,
+    FormsModule,
+    AgmCoreModule
+  ],
+  declarations: [LineChartComponent,
+     DashboardComponent,
+     BarChartComponent, 
+     SpiderChartComponent,
+     GoogleMapComponent, 
+     PieChartComponent, DoughnutChartComponent,
     CommonModule,
     routing,
     FormsModule
