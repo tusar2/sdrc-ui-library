@@ -1,4 +1,5 @@
 
+
 <div class="container-fluid dash-container-fluid">
     <div class="row dash-heading">
         <div class="col-md-2">
@@ -108,6 +109,14 @@
 
 
 <div class="row"> 
+<div class="container">
+    <h4 class="dash-info">Dashboard</h4>
+<div class="row" style="margin-top: 40px;margin-bottom: 40px;">
+    <div class="col-md-12">
+        <sdrc-google-map *ngIf="mapData" [data]="mapData.dataCollection"></sdrc-google-map>
+    </div>
+</div>
+<div class="row">
     <div class="col-md-6">
         <sdrc-spider-chart *ngIf="spiderData" [data]="spiderData.dataCollection"></sdrc-spider-chart>
     </div>
@@ -122,6 +131,13 @@
     </div>
     <div class="col-md-6">
     <sdrc-doughnut-char *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-char>
+    </div>
+        <sdrc-bar-chart *ngIf="barChartData" [data]="barChartData.dataCollection"></sdrc-bar-chart>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8">
+        <sdrc-line-chart *ngIf="lineChartData" [data]="lineChartData"></sdrc-line-chart>
     </div>
 </div>
 </div>

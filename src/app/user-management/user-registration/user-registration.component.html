@@ -17,6 +17,10 @@
           <input type="text" class="dropdown-input" [id]="field.key"
           [placeholder]="''" [(ngModel)]="field.value" name="{{field.columnName}}" >
           <button type="button" dropdownToggle style="padding: 0"
+        width: 100%;margin-bottom: 1rem" *ngSwitchCase="'dropdown'">
+          <input type="text" class="dropdown-input" [id]="field.key" readonly
+          [placeholder]="''" [(ngModel)]="field.value" name="{{field.columnName}}" >
+          <button type="button" style="padding: 0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
           class="btn btn-default dropdown-toggle px-3 waves-light select-dropdown" 
            mdbRippleRadius></button>
           <div class="dropdown-menu drp-list">

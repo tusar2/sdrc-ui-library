@@ -1,7 +1,9 @@
 import { Component, OnInit, Input, Output, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import * as d3 from 'd3';
 import { OnChanges } from '@angular/core/src/metadata/lifecycle_hooks';
+
 import { SpiderChartModel } from '../../models/spider-chart.model';
+
 declare var jquery:any;
 declare var $ :any;
 
@@ -14,7 +16,11 @@ declare var $ :any;
 export class SpiderChartComponent implements OnInit, OnChanges {
 
   @ViewChild('chart') private chartContainer: ElementRef;
+
   @Input() private data: SpiderChartModel;
+
+  @Input() private data: Array<any>;
+
    private margin: any = { top: 20, bottom: 20, left: 20, right: 20};
   private chart: any;
   private width: number;

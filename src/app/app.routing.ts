@@ -7,6 +7,7 @@ import { Exception404Component } from './exception404/exception404.component';
 export const routes: Routes = [
   { path: 'exception', pathMatch: 'full', component: Exception404Component},
   { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
+
   { path: 'report', loadChildren: './report/report.module#ReportModule' },
     { path: 'data-entry', loadChildren: './data-entry/data-entry.module#DataEntryModule' },
     { path: 'about-us', loadChildren: './static/static.module#StaticModule'},
