@@ -24,16 +24,6 @@ import { DoughnutChartComponent } from './charts/doughnut-chart/doughnut-chart.c
     FormsModule,
     AgmCoreModule
   ],
-  declarations: [LineChartComponent,
-     DashboardComponent,
-     BarChartComponent, 
-     SpiderChartComponent,
-     GoogleMapComponent, 
-     PieChartComponent, DoughnutChartComponent,
-    CommonModule,
-    routing,
-    FormsModule
-  ],
   declarations: [LineChartComponent, DashboardComponent, BarChartComponent, SpiderChartComponent, GoogleMapComponent],
   exports: [ LineChartComponent],
   providers: [ DashboardService],

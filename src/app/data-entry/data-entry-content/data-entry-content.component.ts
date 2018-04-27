@@ -24,8 +24,7 @@ export class DataEntryContentComponent implements OnInit {
   ngOnInit() {}
 
   selectDropdown(selectedOption, index){  
-  //  this.allDataService.allformData[index].value = selectedOption.value;
-  //  this.allDataService.allformData[index].key = selectedOption.key;
-  //  console.log(this.allDataService.allformData[index].value);
+    //this.allDataService.allformData[this.allDataService.selectedSection][index].value = selectedOption.value;
+    //console.log(this.allDataService.allformData[this.allDataService.selectedSection][index].value);
   }
 }

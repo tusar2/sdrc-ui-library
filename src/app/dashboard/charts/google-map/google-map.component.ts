@@ -21,9 +21,6 @@ export class GoogleMapComponent implements OnInit {
 
   mapMarkers: GoogleMapModel[];
 
-  mapMarkers: any;
-
-
   ngOnInit() {
     this.dashboardService.getMapData().subscribe(data=>{
       this.mapMarkers = [{"id":137,"areaID":"853","dataValue":"53.7","longitude":83.0379,"latitude":22.983170000000005,"images":"assets/images/facilities/1478586210571.jpg,resources/images/facilities/1478586485599.jpg,resources/images/facilities/1478586697841.jpg","title":"CHC Lakhanpur","showWindow":false,"icon":"assets/images/pushpins/CHC_red.png","dateOfVisit":"2016-11-08"},{"id":141,"areaID":"726","dataValue":"34.9","longitude":80.749355,"latitude":18.485616666666665,"images":"resources/images/facilities/1478594064070.jpg,resources/images/facilities/1478594151749.jpg,resources/images/facilities/1478594213091.jpg","title":"CHC Usoor","showWindow":false,"icon":"assets/images/pushpins/CHC_red.png","dateOfVisit":"2016-11-08"},{"id":143,"areaID":"773","dataValue":"52.0","longitude":84.05565999999999,"latitude":22.997341666666664,"images":"resources/images/facilities/1478681620486.jpg,resources/images/facilities/1478681685140.jpg,resources/images/facilities/1478681770122.jpg","title":"CHC Manora","showWindow":false,"icon":"assets/images/pushpins/CHC_red.png","dateOfVisit":"2016-11-09"}];

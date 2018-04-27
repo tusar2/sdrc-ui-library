@@ -17,9 +17,6 @@ declare var $ :any;
 export class BarChartComponent implements OnInit {
 
   @ViewChild('chart') private chartContainer: ElementRef;
-
-  @Input() private data: BarchartModel;
-
   @Input() private data: Array<any>;
 
   constructor() { }
