@@ -17,7 +17,7 @@ export class LineChartComponent implements OnInit, OnChanges {
 
   @ViewChild('linechart') private chartContainer: ElementRef;
 
-  @Input() private data: LineChartModel[];
+//  @Input() private data: LineChartModel[];
 
   @Input() private data: any;
 

@@ -17,7 +17,7 @@ export class SpiderChartComponent implements OnInit, OnChanges {
 
   @ViewChild('chart') private chartContainer: ElementRef;
 
-  @Input() private data: SpiderChartModel;
+  //@Input() private data: SpiderChartModel;
 
   @Input() private data: Array<any>;
 

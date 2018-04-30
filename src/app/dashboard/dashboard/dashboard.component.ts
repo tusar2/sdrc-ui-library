@@ -19,11 +19,6 @@ export class DashboardComponent implements OnInit {
   lineChartData:LineChartModel[];
   barChartData: BarchartModel[];
   donutChartData: DonutChartModel
-  spiderData: any;
-  mapData: any;
-  lineChartData:any;
-  barChartData: any;
-
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
@@ -46,20 +41,7 @@ export class DashboardComponent implements OnInit {
     this.dashboardService.getDonutChartData().subscribe(data=>{
       this.donutChartData =  <DonutChartModel>data;
     })
-      this.spiderData =  data;
-    })
 
-    this.dashboardService.getLineChartData().subscribe(data=>{
-      this.lineChartData = data;
-    })
-
-    this.dashboardService.getBarChartData().subscribe(data=>{
-      this.barChartData =  data;
-    })
-
-    this.dashboardService.getMapData().subscribe(data=>{
-      this.mapData =  data;
-    })
   }
 
 }
