@@ -13,6 +13,7 @@ export class WebApiService {
   useAreaDetails: any;
   public paramVar: string;
   submissionId: number = null;
+
   constructor(private httpClient: HttpClient) { 
     
   }
@@ -21,6 +22,9 @@ export class WebApiService {
   // Todo: make asynchronous
   getTimeperiodSelections(){
     return this.httpClient.get('./assets/form-questions.json');
+  }
+  getDataEntryDetails(){
+    return this.httpClient.get('./assets/data-entry-section.json');
   }
   getQuestions(id) {  
     if(id == null){

@@ -13,12 +13,12 @@ import { DonutChartModel } from '../models/donut-chart.model';
   providers: [DashboardService]
 })
 export class DashboardComponent implements OnInit {
+
   spiderData: SpiderChartModel;
   mapData: GoogleMapModel[];
   lineChartData:LineChartModel[];
   barChartData: BarchartModel[];
   donutChartData: DonutChartModel
-
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
@@ -42,7 +42,6 @@ export class DashboardComponent implements OnInit {
       this.donutChartData =  <DonutChartModel>data;
     })
 
-  
   }
 
 }

@@ -15,7 +15,7 @@ export class DashboardService {
   }
   getMapData(){
     return this.httpClient.get<GoogleMapModel[]>('assets/mapData.json')
-  }
+  }  
   getBarChartData(){
     return this.httpClient.get('assets/spiderData.json')
   }
@@ -26,5 +26,4 @@ export class DashboardService {
   getDonutChartData(){
     return this.httpClient.get<DonutChartModel>('assets/donutChartData.json');
   }
-
 }

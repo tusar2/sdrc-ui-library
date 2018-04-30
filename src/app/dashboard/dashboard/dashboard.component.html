@@ -1,4 +1,5 @@
 
+
 <div class="container-fluid dash-container-fluid">
     <div class="row dash-heading">
         <div class="col-md-2">
@@ -113,7 +114,7 @@
     </div>
 
     <div class="col-md-6">
-        <sdrc-bar-chart *ngIf="barChartData" [data]="spiderData.dataCollection"></sdrc-bar-chart>
+        <sdrc-bar-chart *ngIf="barChartData" [data]="barChartData.dataCollection"></sdrc-bar-chart>
     </div>
 </div>
 <div class="row">
@@ -121,7 +122,13 @@
         <sdrc-line-chart *ngIf="lineChartData" [data]="lineChartData"></sdrc-line-chart>
     </div>
     <div class="col-md-6">
+
     <sdrc-doughnut-chart *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-chart>
     </div>
+
+        <sdrc-doughnut-char *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-char>
+    </div>    
+
 </div>
+
 </div>
