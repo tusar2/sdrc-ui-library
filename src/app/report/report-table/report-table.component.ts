@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { ReportService } from '../services/report.service';
 
 @Component({
   selector: 'sdrc-report-table',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportTableComponent implements OnInit {
 
-  constructor() { }
+  reportsService: ReportService;
+  constructor(private httpClient: HttpClient, private reportService: ReportService) {
+    this.reportsService = reportService;
+   }
 
   ngOnInit() {
+   
   }
 
 }

@@ -24,16 +24,17 @@ export class DoughnutChartComponent implements OnInit {
   }
 
   createChart(data){
-    var width,
-    height,
+    var width = 200,
+    height = 500,
     margin = {top: 10, right: 10, bottom: 10, left: 10},
     colour = d3.scaleOrdinal(d3.schemeCategory20c), // colour scheme
     variable, // value in data that will dictate proportions on chart
     category, // compare data by
-    padAngle, // effectively dictates the gap between slices
+    padAngle = 0.015, // effectively dictates the gap between slices
     floatFormat = d3.format('.4r'),
-    cornerRadius, // sets how rounded the corners are on each slice
+    cornerRadius = 3, // sets how rounded the corners are on each slice
     percentFormat = d3.format(',.2%');
+    
 
 function chart(selection){
     selection.each(function(data) {

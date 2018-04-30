@@ -44,7 +44,7 @@
                                 <div class="col-md-3 col-md-offset-3">
                                     <div class="select-container text-center">
                                         <div class="input-group">
-                                            <input type="text" placeholder="Time Period *" class="form-control not-visible-input input-box" name="indicator">
+                                            <input type="text" placeholder="Time Period *" class="form-control not-visible-input input-box" name="indicator" readonly="">
                                             <div class="input-group-btn" style="position: relative;">
                                                 <button data-toggle="dropdown" class="btn btn-color dropdown-toggle btn-size" type="button">
                                                     <i class="fa fa-calendar"></i>
@@ -121,7 +121,7 @@
         <sdrc-line-chart *ngIf="lineChartData" [data]="lineChartData"></sdrc-line-chart>
     </div>
     <div class="col-md-6">
-    <sdrc-doughnut-char *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-char>
+    <sdrc-doughnut-chart *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-chart>
     </div>
 </div>
 </div>
