@@ -16,8 +16,8 @@ export class ReportService {
     return this.httpClient.get('./assets/tableData.json');
   }
 
-  createReportTable(tableData){
-    this.reportDetails = tableData;      
+  createReportTable(tableDetails){
+    this.reportDetails = tableDetails;      
     for(let i=0; i<this.reportDetails.length; i++)
     this.columns = Object.keys(this.reportDetails[i])
   }

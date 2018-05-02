@@ -114,7 +114,7 @@
     </div>
 
     <div class="col-md-6">
-        <sdrc-bar-chart *ngIf="barChartData" [data]="barChartData.dataCollection"></sdrc-bar-chart>
+        <sdrc-bar-chart *ngIf="barChartData" [data]="spiderData.dataCollection"></sdrc-bar-chart>
     </div>
 </div>
 <div class="row">
@@ -125,10 +125,17 @@
 
     <sdrc-doughnut-chart *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-chart>
     </div>
+    </div>  
+    
+    <div class="row">
+            <div class="map_popover">
+                    <div class="map_popover_close"></div>
+                    <div class="map_popover_content"></div>
+                </div>
+            <sdrc-thematic-view></sdrc-thematic-view>
+    </div>
 
-        <sdrc-doughnut-char *ngIf="donutChartData" [data]="donutChartData"></sdrc-doughnut-char>
-    </div>    
 
 </div>
 
-</div>
+<!-- </div> -->

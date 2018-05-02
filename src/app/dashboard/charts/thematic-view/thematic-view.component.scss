@@ -1,0 +1,27 @@
+.map_popover {
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px solid #4bbcd7;
+    color: #727272;
+    display: none;
+    font: italic 14px Georgia;
+    left: 0;
+    opacity: 0.6;
+    padding: 4px 20px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: 1000;
+	}
+#districts {
+    fill: #bcbd22;
+}
+path {
+    fill: gray;
+}
+svg {
+    fill: gray;
+}
+g {
+    fill: gray;
+}

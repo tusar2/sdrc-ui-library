@@ -5,6 +5,7 @@ import { LineChartModel } from '../models/line-chart.model';
 import { SpiderChartModel } from '../models/spider-chart.model';
 import { BarchartModel } from '../models/barchart.model';
 import { DonutChartModel } from '../models/donut-chart.model';
+import { Subscriber } from 'rxjs/Subscriber';
 
 @Component({
   selector: 'sdrc-dashboard',
@@ -18,7 +19,8 @@ export class DashboardComponent implements OnInit {
   mapData: GoogleMapModel[];
   lineChartData:LineChartModel[];
   barChartData: BarchartModel[];
-  donutChartData: DonutChartModel
+  donutChartData: DonutChartModel;
+  thematicMapData: any;
   constructor(private dashboardService: DashboardService) { }
 
   ngOnInit() {
@@ -40,6 +42,10 @@ export class DashboardComponent implements OnInit {
 
     this.dashboardService.getDonutChartData().subscribe(data=>{
       this.donutChartData =  <DonutChartModel>data;
+    })
+
+    this.dashboardService.getThematicMapData().subscribe(data=>{
+      this.thematicMapData = data;
     })
 
   }

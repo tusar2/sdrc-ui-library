@@ -24,7 +24,6 @@ export class ReportSelectionComponent implements OnInit {
     },error => {
         this.validationMsg = "Server connection error, please try after some time";
         $('#errorMessage').modal("show");
-      // alert("server connection error, please try after some time")
     })
 
   }
